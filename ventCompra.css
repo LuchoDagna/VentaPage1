@@ -146,6 +146,7 @@ main{
     position: absolute;
     width: 3vh;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .arrow1{
     top: 48%;
@@ -190,6 +191,8 @@ main{
     justify-content: flex-start;
 }
 .container_talle-element{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     font-weight: 500;
     background-color: black;
     font-size: 25px;
