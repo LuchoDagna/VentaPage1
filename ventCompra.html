@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROKEN-COMPRAR</title>
+    <link rel="stylesheet" href="ventCompra.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <p class="header__open-nav-button" onclick="ejecutarMenuDesplegble()">&#9776</p>
+        <div class="header__logo-container">
+            <img class="header__logo" src="assets/WhatsApp Image 2024-08-05 at 18.55.29.jpeg">
+        </div>
+        <nav class="header__nav" id="menu-desplegable" >
+            <img id="cruz" onclick="ejecutarMenuDesplegble()" src="assets/icons8-multiplicar-60.png" alt="X">
+            <li class="header__nav-item" id="broken">BROKEN</li>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Home</a></li>
+                <li class="header__nav-item"><a href="#">About us</a></li>
+                <li class="header__nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main >
+        
+        <div class="container_img">
+            <div class="container_img-holder">
+                <img class="container_img-element" id="img1" src="https://media.gucci.com/content/DiaryArticleSingle_Standard_1536x2150/1723023983/DiaryArticleSingle_Gucci-Women-FW24-July24-1623-GUC-026D-0071-v2-MEA_001_Default.jpg" alt="imagen de venta">
+                <img class="container_img-element" id="img2" src="https://ae-pic-a1.aliexpress-media.com/kf/Sd5e59271b46c4a7dbbf127a79652463ft.jpg_640x640Q90.jpg_.webp" alt="Mmmmm">
+                <img class="container_img-element" id="img3" src="https://media.gucci.com/style/DarkGray_Center_0_0_2400x2400/1711564267/785972_ZAM7G_9082_002_100_0000_Light-Chaqueta-de-lona-de-mezcla-de-lino-con-GG.jpg" alt="">
+                <img class="container_img-element" id="img4" src="https://media.gucci.com/style/DarkGray_Center_0_0_2400x2400/1711564268/785972_ZAM7G_9082_003_100_0000_Light-Chaqueta-de-lona-de-mezcla-de-lino-con-GG.jpg" alt="">
+            </div>
+            <img class="container_img-arrow arrow1" onclick="arrastrarDerecha()" src="assets/icons8-más-de-100.png" alt="arrow">
+            <img class="container_img-arrow arrow2" onclick="arrastrarIzquierda()" src="assets/icons8-más-de-100 menor.png" alt="arrow">
+            
+        </div>
+        <div class="container_prod">
+            <h1 class="container_prod-nombre">Nombre del producto</h1>
+            <h2 class="container_prod-precio">$49.900</h2>
+        </div>
+        <div class="container_talle">
+                    <div class="container_talle2" >
+                        
+                            <input type="radio" name="talle" class="inputTalle" id="inputS">
+                            <label for="inputS" class="container_talle-element">S</label>
+                        
+                        
+                    
+                            <input type="radio" name="talle" class="inputTalle" id="inputM">
+                            <label for="inputM" class="container_talle-element">M</label>
+                        
+                        
+                    
+                            <input type="radio" name="talle" class="inputTalle" id="inputL">
+                            <label for="inputL" class="container_talle-element">L</label>
+                        
+                        
+                    
+                            <input type="radio" name="talle" class="inputTalle" id="inputXL">
+                            <label for="inputXL" class="container_talle-element">XL</label>
+                    </div>
+                    
+            <div class="container_cant">
+                <div class="container_cant-element" id="menos" onclick="restar()">-</div>
+                <div class="container_cant-element" id="num">0</div>
+                <div class="container_cant-element" id="mas" onclick="sumar()">+</div>
+            </div>
+        </div>
+        <div class="container_infoAdicional">
+            <p class="container_infoAdicional-envios">Envios a todo el pais</p>
+            <p class="container_infoAdicional-medios">Medios de pago <img id="menor" onclick="aparecerMedios()" src="assets/icons8-más-de-100 menor.png" alt="flecha"></p>
+            <div class="container_medios" id="container_medios">
+                <img class="medio_pago" src="https://media.a24.com/p/7b842807df15922c598c8bf51f148210/adjuntos/296/imagenes/007/959/0007959650/1200x675/smart/como-funciona-mercado-pago-conoce-sus-ventajas.jpeg" alt="Mercado pago">
+                <img class="medio_pago" src="https://play-lh.googleusercontent.com/jMECkIn97zzMi1IoWlb9SYjtbYolSPmgdLmylwIwo3pbhQ_omkRMzM0bS-PnN461hg" alt="master card">
+                <img class="medio_pago" src="https://s3-symbol-logo.tradingview.com/visa--600.png" alt="">
+                <img class="medio_pago" src="https://pbs.twimg.com/profile_images/1677046344999944193/WRhRxoS2_400x400.jpg" alt="uala">
+            </div>
+            
+        </div>
+        <div class="container_button">
+            <button class="container_button-agregar">
+                AGREGAR AL CARRITO
+            </button>
+        </div>
+    </main>
+    
+    <script src="ventCompra.js"></script>
+</body>
+</html>
