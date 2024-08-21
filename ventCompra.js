@@ -1,11 +1,17 @@
-/* APARECE LOS DISTINTOS MEDIOS DE PAGO*/
+/* APARECE LOS DISTINTOS MEDIOS DE PAGO*/  
+document.getElementsByClassName("container_medio_pago1")[0].style.marginTop=""
 function aparecerMedios(){
-    var medios = document.getElementById("container_medios")
-    if(medios.style.display === "" || medios.style.display === "none"){
-        medios.style.display="flex"
+    var medios = document.getElementsByClassName("container_medio_pago1")[0]
+    var flecha = document.getElementById("menor")
+   
+    if(medios.style.marginTop === "-54px" || medios.style.marginTop === "" ){
+        medios.style.marginTop="0"
+        flecha.style.transform= "rotate(90deg)"
+
     }
     else{
-        medios.style.display="none"
+        medios.style.marginTop="-54px"
+        flecha.style.transform= "rotate(-90deg)"
     }
 }
 
@@ -33,6 +39,12 @@ function ejecutarMenuDesplegble(){
 
 /*ARRASTRA LAS IMAGENES CON EL TACTIL*/
 let contador = 0
+window.addEventListener("resize",()=>{
+contador=0
+console.log(contador)
+containerImgs.style.transform=`translateX(${contador}%)`
+})
+
 const containerImgs = document.getElementsByClassName("container_img-holder")[0];
 const imagenesTouch= document.getElementsByClassName("container_img-element")
 let startX;
@@ -49,16 +61,13 @@ containerImgs.addEventListener("touchend",e =>{
     if (diffX>-50 && contador!=0) {
         contador+=110
         containerImgs.style.transform=`translateX(${contador}%)`
-        console.log(endX, startX, diffX)
     }
     if (diffX<50 && contador!=maxTranslateTouch) {
         contador-=110
         containerImgs.style.transform=`translateX(${contador}%)`
     }
 })
-document.getElementById("img4").addEventListener("click", function() {
-    console.log("Última imagen clicada!");
-});
+
 /* ARRASTRA LAS IMAGENES A LA DERECHA O A LA IZQUIERDA TAMBIEN USA LET CONTADOR*/
 
 

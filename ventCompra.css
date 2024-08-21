@@ -133,6 +133,7 @@ main{
     justify-content: flex-start;
     position: relative;
     width: 100%;
+    -webkit-transition: transform 0.5s ease ;
     transition: transform 0.5s ease ;
     transform: translateX(0%);
 }
@@ -236,7 +237,7 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 5vh;
+    border-radius: 100px;
     background-color: white;
     border: solid 1px black;
     font-size: 3.5vh;
@@ -272,13 +273,16 @@ main{
 .container_infoAdicional-envios{
     font-size: 12px;
     font-weight: 700;
+    z-index: 3;
+    background-color: #EFEFEF;
 }
 .container_infoAdicional-medios{
+    background-color: #EFEFEF;
     position: relative;
     width: 100%;
     margin-top: -10px;
-    border-bottom: 1px solid black;
     padding-bottom: 5px;
+    z-index: 3;
 }
 #menor{
     position: absolute;
@@ -286,6 +290,9 @@ main{
     width: 25px;
     transform: rotate(-90deg);
     cursor: pointer;
+    -webkit-transition: transform 0.5s ease ;
+    transition: transform 0.5s ease;
+    
 }
 .container_button{
     display: flex;
@@ -311,7 +318,24 @@ main{
     border-radius: 100px;
 }
 .container_medios{
-    display: none;
+    height: 70px;
+    margin-top: 0;
+    overflow: hidden;
+    margin-top: -15px;
+
+}
+.container_medio_pago1{
+    width: 100%;
+    margin-top: -54px;
+    padding-top: 10px;
+    -webkit-transition: margin-top 0.5s ease ;
+   transition: margin-top .5s ease;
+} 
+
+.container_medio_pago2{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
 }
 .medio_pago{
     height: 40px;
@@ -319,7 +343,6 @@ main{
     object-fit: cover;
     border-radius: 50%;
     margin-right: 5px;
-    margin-bottom: 16px;
 }
 .catalogo_de_img{
     position: relative;
@@ -339,6 +362,7 @@ main{
 .catalogo_de_img-container{
     position: relative;
     display: flex;
+    -webkit-transition: transform 0.5s ease ;
     transition: transform 0.5s ease ;
     transform: translateX(0%);
     width: 100%;
