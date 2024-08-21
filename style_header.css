@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px black;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+}
+
+.header__open-nav-button{
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    right:10px;
+    user-select: none;
+}
+
+.header__nav{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #EFEFEF;
+    height: 25vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    top: -100%;
+    z-index: 1;
+}
+@keyframes aparecer{
+    0%{
+        top: -500%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.header__nav-list{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    height: 20vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header__logo-container{
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+.header__logo{
+    height: 90%;
+}
+
+.header__nav-item{
+    list-style: none;
+}
+.header__nav-item a{
+    text-align: center;
+}
+
+.header__nav-item a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+}
+#cruz{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    background-color: #efefef;
+    border: solid 1px black;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+#broken{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding-bottom: 5px;
+    border-bottom: lightgray solid 1px;
+    width: 80%;
+    margin-top: 10px;
+
+}
+
+.header__nav-item a:hover{
+    text-decoration: underline;
+}
+/*--------HEADER QUERIES--------*/
+
+@media screen and (min-width: 600px) {
+    .header__open-nav-button, #cruz, #broken{
+        display: none;
+    }
+
+    .header{
+        justify-content: start;
+    }
+
+    .header__nav{
+        display: block !important;
+        position: relative;
+        align-items: center;
+        top: 0;
+        height: 50px;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .header__nav-list{
+        flex-direction: row;
+        height: 50px;
+        align-items: center;
+        margin: 0 0 0 30px;
+    }
+
+    .header__nav-item{
+        width: 130px;
+    }
+
+    .header__nav-item a{
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .header__nav-item a:hover{
+        font-weight: bold;
+    }
+}
